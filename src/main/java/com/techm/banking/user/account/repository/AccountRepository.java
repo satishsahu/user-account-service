@@ -15,6 +15,6 @@ public interface AccountRepository extends CrudRepository<Account, Long> {
 	@Query(value = "select a from Account a where a.userId=:userId")
 	public List<Account> getAccountsByUserId(@Param("userId") long userId);
 	
-	@Query(value = "select a from Account a where a.id!=:accountId")
-	public List<Account> getAccountsOfOthers(@Param("accountId") long accountId);
+	@Query(value = "select a from Account a where a.userId!=:userId")
+	public List<Account> getAccountsOfOthers(@Param("userId") long userId);
 }

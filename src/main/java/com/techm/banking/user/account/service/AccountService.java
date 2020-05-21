@@ -79,8 +79,8 @@ public class AccountService {
 		return accountDto;
 	}
 
-	public List<Account> getAccountsOfOthers(long accountId) {
-		return accountRepository.getAccountsOfOthers(accountId);
+	public List<Account> getAccountsOfOthers(long userId) {
+		return accountRepository.getAccountsOfOthers(userId);
 	}
 
 	public List<AccountDto> getAccountsByUserId(long userId) {

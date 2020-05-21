@@ -46,9 +46,9 @@ public class AccountController {
 		return new ResponseEntity<AccountDto>(accountService.addBeneficiary(id, beneficiaries), HttpStatus.OK);
 	}
 
-	@GetMapping("/others/account/{accountId}")
-	public ResponseEntity<List<Account>> getAccountsOfOthers(@PathVariable long accountId) {
-		return new ResponseEntity<List<Account>>(accountService.getAccountsOfOthers(accountId), HttpStatus.OK);
+	@GetMapping("/others/account/{userId}")
+	public ResponseEntity<List<Account>> getAccountsOfOthers(@PathVariable long userId) {
+		return new ResponseEntity<List<Account>>(accountService.getAccountsOfOthers(userId), HttpStatus.OK);
 	}
 
 	@GetMapping("/user/{userId}")
